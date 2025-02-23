@@ -16,6 +16,10 @@ static func New(d: Array, c: PackedStringArray) -> DataFrame:
 	return df
 
 
+func Size():
+	return len(data)
+
+
 # getters
 func GetColumn(col: String):
 	assert(col in columns)

@@ -1,5 +1,6 @@
 extends Node
 
+@onready var background_table: Control = $Background/Table
 
 func _ready():
 	var columns = ["Team", "Won", "Lost"]
@@ -32,6 +33,9 @@ func _ready():
 	df.SortBy("Pct", true)
 	
 	print(df)
+	
+	background_table.data = df
+	background_table.Render()
 	
 	print(1 / 4)
 	print(3 / 2)
